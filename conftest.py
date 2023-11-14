@@ -5,20 +5,24 @@
 # @Blog    ：
 
 import pytest
-from data.config_data import *
-
+import requests,jsonpath
+from data.config_env import *
 
 @pytest.fixture()
 def login():
-    print("登录成功！")
+    url = test_ip + '/platform/admin/auth/login'
+    payloads = '{"username":"huh1chn","password":"OANodhrzy6QLqZ2gtTBUyg==","loginSource":"ERP"}'
+    response = requests.post(url, json=payloads, headers=headers)
+    token = jsonpath.jsonpath(response.json(), "$..token")
 
+    return token
 
 @pytest.fixture()
 def global_variable():
     '''全局变量配置'''
     variable = {
-        'test_ip': ,
-        'downstream_token': ,
-        'upstream_token':
+        'test_ip': test_ip,
+        'headers': headers,
+        'token': login()
     }
     return variable
