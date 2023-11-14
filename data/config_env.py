@@ -20,6 +20,4 @@ headers = {'Accept':'application/json, text/plain, */*',
                     'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36'}
 
 
-#test_token = "yPO83pC4r%2FGzTOprkYomKoWjd1T6f3%2F8%2BvO5kt%2Bl%2Fd0%2FmqT8x5lunqSyZ5EWhUYRMKFapPwzOJGKRzFCxcwNl2KPBEdwchxLQo0SIPvGSyQdc6ADOJTBoG6VLHHxHu8uudn3Z8XKnQ6BTrAYJ7HQ7Q%3D%3D"
-
-MYSQL_CONFIG=("101.xx.xx.xx",3306, 'root', '123456', 'drf')
+MYSQL_CONFIG=("118.178.125.53",3306, 'root', 'dxT@DiR5Ti4jIGEi', 'beetle')

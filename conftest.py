@@ -12,8 +12,8 @@ from data.config_env import *
 def login():
     url = test_ip + '/platform/admin/auth/login'
     payloads = '{"username":"huh1chn","password":"OANodhrzy6QLqZ2gtTBUyg==","loginSource":"ERP"}'
-    response = requests.post(url, json=payloads, headers=headers)
-    token = jsonpath.jsonpath(response.json(), "$..token")
+    response = requests.post(url, json=payloads, headers=headers).json
+    token = jsonpath.jsonpath(response, "$..token")
 
     return token
 
